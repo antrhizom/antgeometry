@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Einfache Geometrie entdecken</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Einfache Geometrie entdecken</h1>
+      <p>
+        Wähle eine Figur, passe ihre Maße an und beobachte Schritt für Schritt,
+        wie Umfang und Fläche berechnet werden.
+      </p>
+    </header>
+
+    <main class="layout">
+      <nav class="figure-picker" aria-label="Figurenwahl">
+        <button class="figure-button active" data-figure="rectangle">
+          Rechteck
+        </button>
+        <button class="figure-button" data-figure="triangle">Dreieck</button>
+        <button class="figure-button" data-figure="circle">Kreis</button>
+      </nav>
+
+      <section class="figure-panel" aria-live="polite">
+        <div class="diagram" id="diagram" aria-hidden="true"></div>
+
+        <div class="controls" id="controls"></div>
+
+        <section class="results" id="results"></section>
+
+        <section class="tips">
+          <h2>So gehst du vor</h2>
+          <ol>
+            <li>Wähle eine Figur aus der Liste.</li>
+            <li>Bewege die Regler oder gib Werte ein.</li>
+            <li>Verfolge, wie die Formeln mit deinen Zahlen gefüllt werden.</li>
+          </ol>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Tipp: Runde Ergebnisse auf sinnvolle Nachkommastellen und vergleiche sie
+        mit einer groben Skizze, um Plausibilität zu prüfen.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
