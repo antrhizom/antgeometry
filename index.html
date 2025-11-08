@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ant Geometry Explorer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Ant Geometry Explorer</h1>
+      <p>
+        Eine leichte, interaktive Lernumgebung für erste Schritte in der
+        Geometrie. Lege Punkte an, verbinde sie zu Strecken und erkunde die
+        entstehenden Figuren.
+      </p>
+    </header>
+
+    <main class="workspace">
+      <section class="canvas-wrapper">
+        <div class="toolbar" role="toolbar" aria-label="Werkzeugleiste">
+          <button id="point-mode" class="active" type="button">
+            Punkt setzen
+          </button>
+          <button id="segment-mode" type="button">Strecke messen</button>
+          <button id="clear-canvas" type="button" class="danger">
+            Zurücksetzen
+          </button>
+        </div>
+        <canvas
+          id="geometry-canvas"
+          width="720"
+          height="480"
+          aria-label="Zeichenfläche für geometrische Konstruktionen"
+        ></canvas>
+        <p class="status" id="status-text">Modus: Punkt setzen</p>
+      </section>
+
+      <aside class="info-panel">
+        <section>
+          <h2>Was du tun kannst</h2>
+          <ol>
+            <li>Wähle <strong>Punkt setzen</strong> und klicke auf die Fläche.</li>
+            <li>
+              Wechsle zu <strong>Strecke messen</strong> und tippe zwei Punkte an,
+              um ihre Entfernung zu erhalten.
+            </li>
+            <li>Nutze <strong>Zurücksetzen</strong>, um neu zu starten.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Punkte</h2>
+          <ul id="point-list" class="object-list" aria-live="polite"></ul>
+        </section>
+
+        <section>
+          <h2>Strecken</h2>
+          <ul id="segment-list" class="object-list" aria-live="polite"></ul>
+        </section>
+
+        <section>
+          <h2>Entdeckungsfragen</h2>
+          <ul class="question-list">
+            <li>Wie verändert sich die Länge einer Strecke, wenn du einen Punkt bewegst?</li>
+            <li>Kannst du ein gleichschenkliges Dreieck mit drei Punkten bauen?</li>
+            <li>Welche Figur erhältst du, wenn alle Strecken gleich lang sind?</li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <p>
+        Tipp: Nutze die Gitterlinien als Orientierung für Koordinaten und um
+        symmetrische Figuren zu erkennen.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
